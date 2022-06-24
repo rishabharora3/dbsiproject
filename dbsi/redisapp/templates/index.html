@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form1" action= {% url 'getQ1' %} method=GET>
+<h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
+<!-- {% csrf_token %} -->
+
+  <label for="year" >Enter year : </label>
+  <input type="text" id="year" name="year" placeholder="YYYY (Up to 2014)"><br><br>
+  
+
+    <button onclick="send_value()"> Submit </button>
+
+    <script type= "text/javascript">
+     function send_value(){
+    
+                 $.ajax({
+                 url: 'getQ1',
+                 method : 'GET',
+                 data: {quantity: $('#year').val()},
+                  });
+    }
+    </script>
+    
+  </button>
+</form>
+<form id="form2" action ={% url 'getQ2' %} method=GET>
+<h3>Query 2 : Air temperature for each day for a given month, year and weather station selected by the user.</h3>
+<!-- {% csrf_token %} -->
+
+  <label for="Month">Enter Month :</label>
+  <input type="text" id="month" name="month" placeholder="MM"><br><br>
+  
+  <label for="year_2">Enter Year :</label>
+  <input type="text" id="year_2" name="year_2" placeholder="YYYY (Up to 2014)"><br><br>
+  
+  <label for="airBase">Enter Weather Station ID:</label>
+  <input type="text" id="weatherStation" name="airBase" placeholder="XXXXXX:XXXXX"><br><br>
+
+  <button onclick="send_value()"> Submit </button>
+  <script type= "text/javascript">
+    function send_value(){
+   
+                $.ajax({
+                url: 'getQ2',
+                method : 'GET',
+                data: {year: $('#year_2').val(),
+                      month: $('#month').val(),
+                      airbase: $('#airBase').val()},
+                 });
+   }
+   </script>
+</form>
+<form id="form3" action ={% url 'getQ3' %} method=GET>
+  <h3>Query 3 : Average pressure per month for the given year and weather station.</h3>
+  <!-- {% csrf_token %} -->
+    
+    <label for="year_3">Enter Year :</label>
+    <input type="text" id="year_3" name="year_3" placeholder="YYYY (Up to 2014)"><br><br>
+    
+    <label for="station">Enter Weather Station ID:</label>
+    <input type="text" id="weatherStation" name="station" placeholder="XXXXXX:XXXXX"><br><br>
+  
+    <button onclick="send_value()"> Submit </button>
+    <script type= "text/javascript">
+      function send_value(){
+     
+                  $.ajax({
+                  url: 'getQ3',
+                  method : 'GET',
+                  data: {year: $('#year_3').val(),
+                        airbase: $('#station').val()},
+                   });
+     }
+     </script>
+  </form>
+</body>
+</html>
+

@@ -14,8 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf import settings
+from django.urls import path, re_path
+
+from redisapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    re_path(r'^admin/', admin.site.urls), 
+    re_path(r'^queries', views.displayQueries),
+    path('q1Result', views.getQ1, name='getQ1'),
+    path('q2Result', views.getQ2, name='getQ2'),
+    path('q3Result', views.getQ3, name='getQ3')
 ]
+
