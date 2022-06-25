@@ -20,7 +20,7 @@ def getQ1(request):
     data = obj.q1()
     context = {}
     if data:
-        return render(request, 'query1.html', context)
+        return render(request, 'q1.html', context)
     else:
         return render(request, 'error.html', context)
 
@@ -29,7 +29,7 @@ def getQ2(request):
     data = obj.q2()
     context = {}
     if data:
-        return render(request, 'query2.html', context)
+        return render(request, 'q2.html', context)
     else:
         return render(request, 'error.html', context)
 
@@ -38,6 +38,6 @@ def getQ3(request):
     data = obj.q3()
     context = {}
     if data:
-        return render(request, 'query3.html', context)
+        return render(request, 'q3.html', context)
     else:
         return render(request, 'error.html', context)
