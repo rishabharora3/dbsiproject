@@ -118,6 +118,20 @@
          }
          </script>
       </div>
+      <div class="container4">
+        <label for="age"><strong>Query 4 - Find employee using age.</strong></label>
+        <input type="password" placeholder="Enter Employee age" name="uid">
+        <button type="submit" onclick="send_value()"><strong>Search Redis</strong></button>
+        <script type= "text/javascript">
+          function send_value(){
+                      $.ajax({
+                      url: 'getQ4',
+                      method : 'GET',
+                      data: {name: $('#age').val()},
+                       });
+         }
+         </script>
+      </div>
       </div>
     </form>
   </body>

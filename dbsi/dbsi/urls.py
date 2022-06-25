@@ -24,6 +24,7 @@ urlpatterns = [
     re_path(r'^employeehome', views.loadHomePage),
     path('q1Data', views.getQ1, name='getQ1'),
     path('q2Data', views.getQ2, name='getQ2'),
-    path('q3Data', views.getQ3, name='getQ3')
+    path('q3Data', views.getQ3, name='getQ3'),
+    path('q4Data', views.getQ3, name='getQ4')
 ]
 
