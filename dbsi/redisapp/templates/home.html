@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <title>Redis Database</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      .icon {
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+      }
+      button {
+      background-color: #4286f4;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width: 48%;
+      }
+      h1 {
+      text-align:center;
+      fone-size:18;
+      }
+      div{
+        margin:30px;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: center;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 300px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+    }
+      
+    </style>
+  </head>
+  <body>
+    <form>
+      <form id="form1" action= {% url 'getQ1' %} method=GET>
+      <h1>Employee DataSet Redis DataBase Queries</h1>
+      <div class="formcontainer">
+      <div class="container1">
+        <label for="name"><strong>Query 1 - Find employees using full name.</strong></label>
+        <input type="text" name="InputName" id="InputName" placeholder="Enter Employee Name" name="name">
+        <button type="submit" onclick="send_value()"><strong>Search Redis</strong></button>
+        <script type= "text/javascript">
+          function send_value(){
+                      $.ajax({
+                      url: 'getQ1',
+                      method : 'GET',
+                      data: {name: $('#InputName').val()},
+                       });
+         }
+         </script>
+      </div>
+    </form>
+      <div class="container2">
+        <label for="mail"><strong>Query 2 - Find employee using email.</strong></label>
+        <input type="text" placeholder="Enter Employee E-mail" name="mail">
+        <button type="submit" onclick="send_value()"><strong>Search Redis</strong></button>
+        <script type= "text/javascript">
+          function send_value(){
+                      $.ajax({
+                      url: 'getQ2',
+                      method : 'GET',
+                      data: {name: $('#InputName').val()},
+                       });
+         }
+         </script>
+      </div>
+      <div class="container3">
+        <label for="uid"><strong>Query 3 - Find employee using Employee Id.</strong></label>
+        <input type="password" placeholder="Enter Employee Id" name="uid">
+        <button type="submit" onclick="send_value()"><strong>Search Redis</strong></button>
+        <script type= "text/javascript">
+          function send_value(){
+                      $.ajax({
+                      url: 'getQ3',
+                      method : 'GET',
+                      data: {name: $('#InputName').val()},
+                       });
+         }
+         </script>
+      </div>
+      </div>
+    </form>
+  </body>
+</html>

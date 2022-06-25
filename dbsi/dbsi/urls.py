@@ -21,7 +21,7 @@ from redisapp import views
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls), 
-    re_path(r'^queries', views.displayQueries),
+    re_path(r'^employeehome', views.loadHomePage),
     path('q1Result', views.getQ1, name='getQ1'),
     path('q2Result', views.getQ2, name='getQ2'),
     path('q3Result', views.getQ3, name='getQ3')

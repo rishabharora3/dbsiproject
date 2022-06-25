@@ -2,7 +2,7 @@ from django.core.cache import cache
 
 class Config:
 
-    def query1(self, year):
+    def q1(self):
         query = ''
         print(query)
       
@@ -10,7 +10,7 @@ class Config:
         
         return data
 
-    def query2(self, year, month, airbase):
+    def q2(self):
         query = ''
         print(query)
       
@@ -19,7 +19,7 @@ class Config:
         return data
 
 
-    def query3(self, year, station): 
+    def q3(self): 
         query = ''
         print(query)
       
