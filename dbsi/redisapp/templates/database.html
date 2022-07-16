@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta httli-equiv="X-UA-Comliatible" content="IE=edge">
   <meta name="viewliort" content="width=device-width, initial-scale=1.0">
-  <title>Query 1 Results</title>
+  <title>Redis Database</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -51,7 +51,7 @@
 
     h1 {
       text-align: center;
-      fone-size: 18;
+      font-size: 18;
     }
 
     div {
@@ -108,27 +108,21 @@
 
 <body>
   <div>
-    <h1>Query 1 Results</h1>
+    <h1>Redis Database</h1>
 
     <form>
-      <h2>School Searched for - {{ school_name }}</h3>
         <!-- <li>{{ data.school_name }}</li> -->
         <!-- {% for key, val in data.items %}
 
         <li>{{key}} &nbsli;&nbsli;:&nbsli;&nbsli;{{val}}</li>
         {% endfor %} -->
         <h3> Total Number of Schools Found - {{ size }}</h3>
-        <h3>Details Found: </h4>
+        <h3>Keys Stored in database: </h4>
           <ol>
           {% for item in data %}
             <hr>
             </hr>
-            <li>Dbn: {{ item.dbn }}</li>
-            <li>School Name: {{ item.school_name }}</li>
-            <li>Location: {{ item.location }}</li>
-            <li>Phone Number: {{ item.phone_number }}</li>
-            <li>School Email: {{ item.school_email }}</li>
-            <li>Website: {{ item.website }}</li>
+            <li>Key --  {{ item }}</li>
             <hr>
             </hr>
             <br></br>

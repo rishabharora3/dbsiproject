@@ -3,18 +3,74 @@ from django.db import models
 
 # Create your models here.
 
+class SchoolItem(models.Model):
+    """
+    Model representing a school item.
+    """
+    dbn = models.CharField(max_length=10, primary_key=True)
+    school_name = models.CharField(max_length=100,null=True)
+    boro = models.CharField(max_length=1)
+    overview_paragraph = models.TextField()
+    school_10th_seats = models.IntegerField(null=True)
+    academicopportunities1 = models.CharField(max_length=100,null=True)
+    academicopportunities2 = models.CharField(max_length=100,null=True)
+    academicopportunities3 = models.CharField(max_length=100,null=True)
+    ell_programs = models.CharField(max_length=100,null=True)
+    language_classes = models.CharField(max_length=100,null=True)
+    neighborhood = models.CharField(max_length=100,null=True)
+    building_code = models.CharField(max_length=100,null=True)
+    location = models.CharField(max_length=100,null=True)
+    phone_number = models.CharField(max_length=100,null=True)
+    fax_number = models.CharField(max_length=100,null=True)
+    school_email = models.CharField(max_length=100,null=True)
+    website = models.CharField(max_length=100,null=True)
+    subway = models.CharField(max_length=100,null=True)
+    bus = models.CharField(max_length=100,null=True)
+    grades2018 = models.CharField(max_length=100,null=True)
+    finalgrades = models.CharField(max_length=100,null=True)
+    total_students = models.IntegerField(null=True)
+    extracurricular_activities = models.CharField(max_length=100,null=True)
+    school_sports = models.CharField(max_length=100,null=True)
+    attendance_rate = models.CharField(max_length=100,null=True)
+    pct_stu_enough_variety = models.CharField(max_length=100,null=True)
+    pct_stu_safe = models.CharField(max_length=100,null=True)
+    school_accessibility_description = models.CharField(max_length=100,null=True)
+    directions1 = models.CharField(max_length=100,null=True)
+    requirement1_1 = models.CharField(max_length=100,null=True)
+    requirement2_1 = models.CharField(max_length=100,null=True)
+    requirement3_1 = models.CharField(max_length=100,null=True)
+    requirement4_1 = models.CharField(max_length=100,null=True)
+    requirement5_1 = models.CharField(max_length=100,null=True)
+    offer_rate1 = models.CharField(max_length=100,null=True)
+    program1 = models.CharField(max_length=100,null=True)
+    code1 = models.CharField(max_length=100,null=True)
+    interest1 = models.CharField(max_length=100,null=True)    
+    method1 = models.CharField(max_length=100,null=True)
+    seats9ge1 = models.IntegerField(null=True)
+    grade9gefilledflag1 = models.CharField(max_length=100,null=True)
+    grade9geapplicants1 = models.IntegerField(null=True)
+    seats9swd1 = models.IntegerField(null=True)
+    grade9swdfilledflag1 = models.CharField(max_length=100,null=True)
+    grade9swdapplicants1 = models.IntegerField(null=True)
+    seats101 = models.CharField(max_length=100,null=True)
+    admissionspriority11 = models.CharField(max_length=100,null=True)
+    admissionspriority21 = models.CharField(max_length=100,null=True)
+    admissionspriority31 = models.CharField(max_length=100,null=True)
+    grade9geapplicantsperseat1 = models.IntegerField(null=True)
+    grade9swdapplicantsperseat1 = models.IntegerField(null=True)
+    primary_address_line_1 = models.CharField(max_length=100,null=True)
+    city = models.CharField(max_length=100,null=True)
+    zip = models.CharField(max_length=100,null=True)
+    state_code = models.CharField(max_length=100,null=True)
+    latitude = models.CharField(max_length=100,null=True)
+    longitude = models.CharField(max_length=100,null=True)
+    community_board = models.CharField(max_length=100,null=True)
+    council_district = models.CharField(max_length=100,null=True)
+    census_tract = models.CharField(max_length=100,null=True)
+    bin = models.CharField(max_length=100,null=True)
+    bbl = models.CharField(max_length=100,null=True)
+    nta = models.CharField(max_length=100,null=True)
+    borough = models.CharField(max_length=100,null=True)
 
-class Employee(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self) -> str:
-        return self.name
-
-class EmployeeDetail(models.Model):
-    category = models.ForeignKey(Employee,on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    image_url = models.CharField(max_length=500)
-    description = models.TextField()
-
-    def __str__(self) -> str:
-        return self.name
+    def __str__(self):
+        return self.school_name

@@ -1,1 +1,123 @@
-In Progress
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta httli-equiv="X-UA-Comliatible" content="IE=edge">
+    <meta name="viewliort" content="width=device-width, initial-scale=1.0">
+    <title>Query 4 Results</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 15px;
+      }
+  
+      form {
+        border: 5px solid #f1f1f1;
+        padding: 20px;
+      }
+  
+      input[type=text],
+      input[type=password] {
+        width: 100%;
+        padding: 16px 8px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+  
+      .icon {
+        font-size: 110px;
+        display: flex;
+        justify-content: center;
+        color: #4286f4;
+      }
+  
+      button {
+        background-color: #4286f4;
+        color: white;
+        padding: 14px 0;
+        margin: 10px 0;
+        border: none;
+        cursor: grab;
+        width: 48%;
+      }
+  
+      h1 {
+        text-align: center;
+        font-size: 18;
+      }
+  
+      div {
+        margin: 30px;
+      }
+  
+      button:hover {
+        opacity: 0.8;
+      }
+  
+      .formcontainer {
+        text-align: center;
+        margin: 24px 50px 12px;
+      }
+  
+      .container {
+        padding: 16px 0;
+        text-align: left;
+      }
+  
+      span.psw {
+        float: right;
+        padding-top: 0;
+        padding-right: 15px;
+      }
+  
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+      }
+      .striped-border { border: 1px dashed #000; width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; }
+    </style>
+</head>
+
+<body>
+    <div>
+    <h1>Query 4 Results</h1>
+
+    <form>
+        <h2>School Updated using name - {{ school_name }}</h3>  
+        <h2>New School Address - {{ school_address }}</h3>
+
+        <!-- <li>{{ data.school_name }}</li> -->
+        <!-- {% for key, val in data.items %}
+
+        <li>{{key}} &nbsli;&nbsli;:&nbsli;&nbsli;{{val}}</li>
+        {% endfor %} -->
+        <h1>School Updated Successfully in database</h1>
+        <!-- {% for item in data %}
+        <hr></hr>
+        <li>Dbn: {{ item.dbn }}</li>
+        <li>School Name: {{ item.school_name }}</li>
+        <li>Location: {{ item.location }}</li>
+        <li>Phone Number: {{ item.phone_number }}</li>
+        <li>School Email: {{ item.school_email }}</li>
+        <li>Website: {{ item.website }}</li>
+        <li>Borough: {{ item.borough }}</li>
+        <hr></hr>
+        <br></br>
+        {% endfor %} -->
+        </form>
+</div>
+
+</body>
+
+</html>
